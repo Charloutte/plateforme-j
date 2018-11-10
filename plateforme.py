@@ -23,6 +23,6 @@ f = open(chemin, 'r')
 try :
     fichier_csv = csv.reader(f)
     for row in fichier_csv :
-        print(row[0])
+        print(row)
 finally :
     f.close()
