@@ -7,7 +7,6 @@ Created on Mon Nov  5 11:42:53 2018
 """
 
 import csv
-import matplotlib
 
 chemin = 'synthese-test.csv'
 
@@ -21,8 +20,10 @@ f = open(chemin, 'r')
 
 
 try :
-    fichier_csv = csv.reader(f)
+    fichier_csv = csv.DictReader(f)
+    
     for row in fichier_csv :
         print(row)
+        
 finally :
     f.close()
